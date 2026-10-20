@@ -2,7 +2,8 @@
 
 Tugas: membuat studi kasus berdasarkan materi para pemateri **Informatics Practitioner Lecture Series: Connecting Academic Knowledge with Industry and Global Technology** (Program Studi Informatika, Fakultas Teknik, Universitas Bengkulu), lengkap dengan implementasi kode.
 
-**Nama:** _isi nama_  |  **NPM:** _isi NPM_
+**Nama:** _Sakina Risa Julianti_  
+**NPM:** _G1A025069_
 
 > Semua data pada repositori ini adalah **data simulasi** untuk memahami konsep dan alur kerja, bukan analisis lapangan atau sistem produksi yang telah divalidasi.
 
