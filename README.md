@@ -22,11 +22,11 @@ Hasil (grafik, peta, dashboard) tersimpan di folder `output/`.
 | Sesi | Narasumber | Materi | Studi Kasus | File |
 |---|---|---|---|---|
 | 1 | Andria Arisal (BRIN) | Make Sense of Data with Analysis and AI | Analisis penjualan toko kopi kampus & prediksi omzet | `01_make_sense_of_data_with_ai.py` |
-| 2 | Worawan Diaz Carballo (Thammasat Univ.) | Bridging Global Infrastructure to Address Local Challenges with HPC | Estimasi Pi Monte Carlo: sekuensial vs paralel | `02_hpc_bridging_global_infrastructure.py` |
+| 2 | Worawan Diaz Carballo (Thammasat UnivERSITY.) | Bridging Global Infrastructure to Address Local Challenges with HPC | Estimasi Pi Monte Carlo: sekuensial vs paralel | `02_hpc_bridging_global_infrastructure.py` |
 | 3 | Widi Prima Deva (Citycare Property, NZ) | Career and Competition in Industrial Era with GIS | Prioritas pemeriksaan fasilitas publik di Kota Bengkulu terhadap zona rawan banjir | `03_gis_career_and_competition.py` |
-| 4 | Taniza Tajuddin (UiTM) | Introduction to Machine Learning | Prediksi kelulusan tepat waktu mahasiswa (Decision Tree vs KNN) | `04_introduction_to_machine_learning.py` |
+| 4 | Taniza Tajuddin (Universiti Teknologi MARA, Cawangan Kedah) | Introduction to Machine Learning | Prediksi kelulusan tepat waktu mahasiswa (Decision Tree vs KNN) | `04_introduction_to_machine_learning.py` |
 | 5 | Arafat Febriandirza (BRIN) | Human-Computer Interaction & Data Visualization | Dashboard monitoring server kampus | `05_hci_and_data_visualization.py` |
-| 6 | Bart Slagter (Wageningen Univ. & Research) | Attributing Direct Drivers to Deforestation Alerts with Satellite Imagery and AI | Klasifikasi penyebab deforestasi dari fitur NDVI/NBR | `06_deforestation_satellite_imagery_ai.py` |
+| 6 | Bart Slagter (Wageningen University & Research) | Attributing Direct Drivers to Deforestation Alerts with Satellite Imagery and AI | Klasifikasi penyebab deforestasi dari fitur NDVI/NBR | `06_deforestation_satellite_imagery_ai.py` |
 
 ---
 
