@@ -1,0 +1,117 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.2655,
+          -3.7975
+        ]
+      },
+      "properties": {
+        "nama": "Pasar D",
+        "jenis": "Pasar",
+        "jarak_km": 0.24,
+        "skor": 79.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.261,
+          -3.7935
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan A",
+        "jenis": "Jembatan",
+        "jarak_km": 0.43,
+        "skor": 74.6
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.25,
+          -3.81
+        ]
+      },
+      "properties": {
+        "nama": "Gorong-gorong E",
+        "jenis": "Drainase",
+        "jarak_km": 2.2,
+        "skor": 70.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.28,
+          -3.79
+        ]
+      },
+      "properties": {
+        "nama": "SD Negeri C",
+        "jenis": "Sekolah",
+        "jarak_km": 1.9,
+        "skor": 40.0
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.255,
+          -3.785
+        ]
+      },
+      "properties": {
+        "nama": "Kantor Kelurahan G",
+        "jenis": "Kantor",
+        "jarak_km": 1.58,
+        "skor": 36.5
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.27,
+          -3.805
+        ]
+      },
+      "properties": {
+        "nama": "Puskesmas B",
+        "jenis": "Kesehatan",
+        "jarak_km": 1.2,
+        "skor": 34.4
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          102.29,
+          -3.82
+        ]
+      },
+      "properties": {
+        "nama": "Halte F",
+        "jenis": "Transport",
+        "jarak_km": 3.93,
+        "skor": 15.0
+      }
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard Monitoring Server</title>
+<style>
+  body { font-family: system-ui, sans-serif; background:#f4f6fa; margin:0; padding:24px; color:#1c2333; }
+  h1 { margin:0 0 4px; } p.sub { margin:0 0 20px; color:#5b6478; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:16px; }
+  .card { background:#fff; border-radius:14px; padding:16px; border-left:8px solid; box-shadow:0 2px 8px #0001; }
+  .card.normal  { border-color:#2e9e5b; } .card.waspada { border-color:#e0a100; } .card.kritis { border-color:#d6372f; }
+  .judul { font-size:14px; color:#5b6478; }
+  .nilai { font-size:34px; font-weight:700; margin:6px 0; } .nilai span { font-size:16px; margin-left:4px; }
+  .bar { background:#e6e9f0; height:8px; border-radius:4px; overflow:hidden; }
+  .bar div { height:100%; background:currentColor; }
+  .normal .bar div { background:#2e9e5b; } .waspada .bar div { background:#e0a100; } .kritis .bar div { background:#d6372f; }
+  .badge { margin-top:10px; font-weight:600; font-size:14px; }
+  button { margin-top:24px; padding:12px 22px; border:0; border-radius:10px; background:#2f5bea; color:#fff;
+            font-size:16px; cursor:pointer; transition:transform .1s, background .2s; }
+  button:hover { background:#1f45c4; } button:active { transform:scale(.97); }
+  #hasil { margin-top:14px; padding:12px; border-radius:10px; background:#fff; display:none; }
+</style></head><body>
+<h1>Dashboard Monitoring Server Kampus</h1>
+<p class="sub">Data simulasi — warna + ikon + teks dipakai bersama agar mudah dibaca semua pengguna.</p>
+<div class="grid">
+    <div class="card normal">
+      <div class="judul">CPU</div>
+      <div class="nilai">45<span>%</span></div>
+      <div class="bar"><div style="width:50%"></div></div>
+      <div class="badge">✅ Normal</div>
+    </div>
+    <div class="card waspada">
+      <div class="judul">Memori</div>
+      <div class="nilai">78<span>%</span></div>
+      <div class="bar"><div style="width:87%"></div></div>
+      <div class="badge">⚠️ Waspada</div>
+    </div>
+    <div class="card kritis">
+      <div class="judul">Disk</div>
+      <div class="nilai">93<span>%</span></div>
+      <div class="bar"><div style="width:100%"></div></div>
+      <div class="badge">⛔ Kritis</div>
+    </div>
+    <div class="card normal">
+      <div class="judul">Latensi Jaringan</div>
+      <div class="nilai">38<span>ms</span></div>
+      <div class="bar"><div style="width:19%"></div></div>
+      <div class="badge">✅ Normal</div>
+    </div>
+    <div class="card normal">
+      <div class="judul">Pengguna Aktif</div>
+      <div class="nilai">412<span></span></div>
+      <div class="bar"><div style="width:41%"></div></div>
+      <div class="badge">✅ Normal</div>
+    </div>
+    <div class="card normal">
+      <div class="judul">Error Rate</div>
+      <div class="nilai">0.4<span>%</span></div>
+      <div class="bar"><div style="width:8%"></div></div>
+      <div class="badge">✅ Normal</div>
+    </div></div>
+<button id="diag">🔍 Jalankan Diagnostik</button>
+<div id="hasil" role="status" aria-live="polite"></div>
+<script>
+  const metrik = [{"nama": "CPU", "nilai": 45, "unit": "%", "waspada": 70, "kritis": 90}, {"nama": "Memori", "nilai": 78, "unit": "%", "waspada": 75, "kritis": 90}, {"nama": "Disk", "nilai": 93, "unit": "%", "waspada": 80, "kritis": 90}, {"nama": "Latensi Jaringan", "nilai": 38, "unit": "ms", "waspada": 100, "kritis": 200}, {"nama": "Pengguna Aktif", "nilai": 412, "unit": "", "waspada": 800, "kritis": 1000}, {"nama": "Error Rate", "nilai": 0.4, "unit": "%", "waspada": 2, "kritis": 5}];
+  document.getElementById('diag').addEventListener('click', function() {
+    const btn = this; btn.disabled = true; btn.textContent = '⏳ Memeriksa...';
+    setTimeout(() => {
+      const bermasalah = metrik.filter(m => m.nilai >= m.waspada);
+      const el = document.getElementById('hasil');
+      el.style.display = 'block';
+      el.innerHTML = bermasalah.length
+        ? '<b>' + bermasalah.length + ' metrik perlu perhatian:</b> ' + bermasalah.map(m => m.nama).join(', ')
+        : 'Semua metrik normal ✅';
+      btn.disabled = false; btn.textContent = '🔍 Jalankan Diagnostik';
+    }, 800);
+  });
+</script></body></html>

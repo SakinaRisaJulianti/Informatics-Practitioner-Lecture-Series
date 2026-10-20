@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_8f9e0ae5fa0db56df41baa67793878a4 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_8f9e0ae5fa0db56df41baa67793878a4" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_8f9e0ae5fa0db56df41baa67793878a4 = L.map(
+                "map_8f9e0ae5fa0db56df41baa67793878a4",
+                {
+                    center: [-3.796, 102.264],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a1cee7e0dc1a267411e9f3755240410b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a1cee7e0dc1a267411e9f3755240410b.addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+            var circle_459aa34e0ebbd53fc87a5efeaf7a4fec = L.circle(
+                [-3.796, 102.264],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.1, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 2000.0, "stroke": true, "weight": 3}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+            circle_459aa34e0ebbd53fc87a5efeaf7a4fec.bindTooltip(
+                `<div>
+                     Zona rawan banjir
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_31aa22905a645b2eda208b23681d973e = L.marker(
+                [-3.796, 102.264],
+                {
+}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+            var icon_4661d2fb23fefb7bbd5c053da6625882 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "tint",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+            marker_31aa22905a645b2eda208b23681d973e.bindTooltip(
+                `<div>
+                     Titik rawan banjir
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_31aa22905a645b2eda208b23681d973e.setIcon(icon_4661d2fb23fefb7bbd5c053da6625882);
+            
+    
+            var circle_marker_0d24f7f711d879242e595803ed6e8c07 = L.circleMarker(
+                [-3.7975, 102.2655],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+        var popup_a1afa30328e01cd9e2f9a55f0ef51f4f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_187b6bea649e7f7e012d1e47d235a261 = $(`<div id="html_187b6bea649e7f7e012d1e47d235a261" style="width: 100.0%; height: 100.0%;">Pasar D<br>Jenis: Pasar<br>Jarak: 0.24 km<br>Skor: 79.5</div>`)[0];
+                popup_a1afa30328e01cd9e2f9a55f0ef51f4f.setContent(html_187b6bea649e7f7e012d1e47d235a261);
+            
+        
+
+        circle_marker_0d24f7f711d879242e595803ed6e8c07.bindPopup(popup_a1afa30328e01cd9e2f9a55f0ef51f4f)
+        ;
+
+        
+    
+    
+            circle_marker_0d24f7f711d879242e595803ed6e8c07.bindTooltip(
+                `<div>
+                     Pasar D | skor 79.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_171f9eec6e94a827b5612b8fcfb952b8 = L.circleMarker(
+                [-3.7935, 102.261],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+        var popup_db09a31456296e59f2012570a02572b5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_07c5a4bbde80ad9799435ece4ac69ebe = $(`<div id="html_07c5a4bbde80ad9799435ece4ac69ebe" style="width: 100.0%; height: 100.0%;">Jembatan A<br>Jenis: Jembatan<br>Jarak: 0.43 km<br>Skor: 74.6</div>`)[0];
+                popup_db09a31456296e59f2012570a02572b5.setContent(html_07c5a4bbde80ad9799435ece4ac69ebe);
+            
+        
+
+        circle_marker_171f9eec6e94a827b5612b8fcfb952b8.bindPopup(popup_db09a31456296e59f2012570a02572b5)
+        ;
+
+        
+    
+    
+            circle_marker_171f9eec6e94a827b5612b8fcfb952b8.bindTooltip(
+                `<div>
+                     Jembatan A | skor 74.6
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_d1a8d9c9a43baf889ae1bd87ce0f29b6 = L.circleMarker(
+                [-3.81, 102.25],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+        var popup_a9b7eb9c24988b5b9a70a577e18ecb58 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_66e9d2f52c2af05143c438d663a07f23 = $(`<div id="html_66e9d2f52c2af05143c438d663a07f23" style="width: 100.0%; height: 100.0%;">Gorong-gorong E<br>Jenis: Drainase<br>Jarak: 2.2 km<br>Skor: 70.0</div>`)[0];
+                popup_a9b7eb9c24988b5b9a70a577e18ecb58.setContent(html_66e9d2f52c2af05143c438d663a07f23);
+            
+        
+
+        circle_marker_d1a8d9c9a43baf889ae1bd87ce0f29b6.bindPopup(popup_a9b7eb9c24988b5b9a70a577e18ecb58)
+        ;
+
+        
+    
+    
+            circle_marker_d1a8d9c9a43baf889ae1bd87ce0f29b6.bindTooltip(
+                `<div>
+                     Gorong-gorong E | skor 70.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_20d77c1a151041d3509c3ef7d77b5bae = L.circleMarker(
+                [-3.79, 102.28],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+        var popup_4cc82409a51f5859294d49527fcd9802 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_afb0a754cd592659f6ce901517fd210f = $(`<div id="html_afb0a754cd592659f6ce901517fd210f" style="width: 100.0%; height: 100.0%;">SD Negeri C<br>Jenis: Sekolah<br>Jarak: 1.9 km<br>Skor: 40.0</div>`)[0];
+                popup_4cc82409a51f5859294d49527fcd9802.setContent(html_afb0a754cd592659f6ce901517fd210f);
+            
+        
+
+        circle_marker_20d77c1a151041d3509c3ef7d77b5bae.bindPopup(popup_4cc82409a51f5859294d49527fcd9802)
+        ;
+
+        
+    
+    
+            circle_marker_20d77c1a151041d3509c3ef7d77b5bae.bindTooltip(
+                `<div>
+                     SD Negeri C | skor 40.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_929b0c1fd51abb303c3abe923ad4d8db = L.circleMarker(
+                [-3.785, 102.255],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+        var popup_5e8c8c362ac4c204555ad09a138f8bd5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1290fe2ee36f1eacf468faf5bf062b59 = $(`<div id="html_1290fe2ee36f1eacf468faf5bf062b59" style="width: 100.0%; height: 100.0%;">Kantor Kelurahan G<br>Jenis: Kantor<br>Jarak: 1.58 km<br>Skor: 36.5</div>`)[0];
+                popup_5e8c8c362ac4c204555ad09a138f8bd5.setContent(html_1290fe2ee36f1eacf468faf5bf062b59);
+            
+        
+
+        circle_marker_929b0c1fd51abb303c3abe923ad4d8db.bindPopup(popup_5e8c8c362ac4c204555ad09a138f8bd5)
+        ;
+
+        
+    
+    
+            circle_marker_929b0c1fd51abb303c3abe923ad4d8db.bindTooltip(
+                `<div>
+                     Kantor Kelurahan G | skor 36.5
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_6a8fe2e85c7f55767e36281a2fc8d726 = L.circleMarker(
+                [-3.805, 102.27],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+        var popup_af4c892dacf2c37789ec188230cfb9b7 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_409b606ac4293ba9693a7bad2a78a68a = $(`<div id="html_409b606ac4293ba9693a7bad2a78a68a" style="width: 100.0%; height: 100.0%;">Puskesmas B<br>Jenis: Kesehatan<br>Jarak: 1.2 km<br>Skor: 34.4</div>`)[0];
+                popup_af4c892dacf2c37789ec188230cfb9b7.setContent(html_409b606ac4293ba9693a7bad2a78a68a);
+            
+        
+
+        circle_marker_6a8fe2e85c7f55767e36281a2fc8d726.bindPopup(popup_af4c892dacf2c37789ec188230cfb9b7)
+        ;
+
+        
+    
+    
+            circle_marker_6a8fe2e85c7f55767e36281a2fc8d726.bindTooltip(
+                `<div>
+                     Puskesmas B | skor 34.4
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var circle_marker_3e88b1565c5193a59d176f3a9e6ca506 = L.circleMarker(
+                [-3.82, 102.29],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_8f9e0ae5fa0db56df41baa67793878a4);
+        
+    
+        var popup_d6814fb230389a2c40b57fa10f33e645 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_781c1635c88d6dbd20148623b288131b = $(`<div id="html_781c1635c88d6dbd20148623b288131b" style="width: 100.0%; height: 100.0%;">Halte F<br>Jenis: Transport<br>Jarak: 3.93 km<br>Skor: 15.0</div>`)[0];
+                popup_d6814fb230389a2c40b57fa10f33e645.setContent(html_781c1635c88d6dbd20148623b288131b);
+            
+        
+
+        circle_marker_3e88b1565c5193a59d176f3a9e6ca506.bindPopup(popup_d6814fb230389a2c40b57fa10f33e645)
+        ;
+
+        
+    
+    
+            circle_marker_3e88b1565c5193a59d176f3a9e6ca506.bindTooltip(
+                `<div>
+                     Halte F | skor 15.0
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>
